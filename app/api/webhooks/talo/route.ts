@@ -1,7 +1,7 @@
 import { getTalo } from "@/lib/talo";
 import { getOrderByExternalId, updateOrder } from "@/lib/store";
 import { generateImage } from "@/lib/generate";
-import type { PaymentUpdatedWebhookEvent, PaymentResponse } from "@talo/pay-sdk";
+import type { PaymentUpdatedWebhookEvent, PaymentResponse } from "talo-pay";
 
 let _webhookHandler: (request: Request) => Promise<Response>;
 
