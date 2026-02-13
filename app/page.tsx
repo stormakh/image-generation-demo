@@ -235,7 +235,7 @@ export default function Home() {
             <div className="mt-4 flex items-center justify-between">
               <span className="text-sm text-zinc-600">
                 Cost:{" "}
-                <span className="font-medium text-zinc-400">$1,000 ARS</span>
+                <span className="font-medium text-zinc-400">$100 ARS</span>
               </span>
 
               <button
@@ -303,7 +303,7 @@ export default function Home() {
             <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 backdrop-blur-sm">
               <p className="mb-4 text-sm text-zinc-400">
                 Transfer{" "}
-                <span className="font-semibold text-white">$1,000 ARS</span>{" "}
+                <span className="font-semibold text-white">$100 ARS</span>{" "}
                 to the following account. Once confirmed, your image will be
                 generated automatically.
               </p>
