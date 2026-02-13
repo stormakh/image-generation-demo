@@ -1,3 +1,5 @@
+export const GENERATION_PRICE = 100;
+
 export type OrderStatus =
   | "pending_payment"
   | "payment_confirmed"

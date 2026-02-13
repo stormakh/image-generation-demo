@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getTalo } from "@/lib/talo";
-import { createOrder } from "@/lib/store";
+import { createOrder, GENERATION_PRICE } from "@/lib/store";
 
 export async function POST(request: Request) {
   try {
@@ -17,14 +17,10 @@ export async function POST(request: Request) {
     const externalId = `img_${orderId}`;
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
-    console.log("TALO_USER_ID", process.env.TALO_USER_ID);
-    console.log("TALO_CLIENT_ID", process.env.TALO_CLIENT_ID);
-    console.log("TALO_CLIENT_SECRET", process.env.TALO_CLIENT_SECRET);
-
     const talo = getTalo();
     const payment = await talo.payments.create({
       user_id: process.env.TALO_USER_ID!,
-      price: { amount: 100, currency: "ARS" },
+      price: { amount: GENERATION_PRICE, currency: "ARS" },
       payment_options: ["transfer"],
       external_id: externalId,
       webhook_url: `${baseUrl}/api/webhooks/talo`,

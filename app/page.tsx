@@ -1,5 +1,6 @@
 "use client";
 
+import { GENERATION_PRICE } from "@/lib/store";
 import { useState, useEffect, useRef, useCallback } from "react";
 
 type Status =
@@ -311,17 +312,17 @@ export default function Home() {
               {/* CVU */}
               <div className="mb-3">
                 <label className="mb-1.5 block text-[11px] uppercase tracking-widest text-zinc-600">
-                  CVU
+                  Amount
                 </label>
                 <button
-                  onClick={() => handleCopy(order.cvu, "cvu")}
+                  onClick={() => handleCopy(GENERATION_PRICE.toString(), "amount")}
                   className="group flex w-full items-center justify-between rounded-xl border border-white/[0.06] bg-white/[0.02] px-4 py-3 text-left transition-colors hover:bg-white/[0.04]"
                 >
                   <span className="font-mono text-sm tracking-wider text-zinc-300">
-                    {order.cvu}
+                    {GENERATION_PRICE} ARS
                   </span>
                   <span className="text-xs text-zinc-600 transition-colors group-hover:text-zinc-400">
-                    {copied === "cvu" ? "Copied!" : "Copy"}
+                    {copied === "amount" ? "Copied!" : "Copy"}
                   </span>
                 </button>
               </div>
