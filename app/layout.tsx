@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 const TALO_SDK_URL = "https://github.com/stormakh/talo-sdk";
 const DEMO_REPO_URL = "https://github.com/stormakh/image-generation-demo";
-const EXAMPLES_BASE = `${TALO_SDK_URL}/tree/main/examples`;
+const EXAMPLES_BASE = `${TALO_SDK_URL}/tree/master/examples`;
 
 const examples = [
   { label: "Elysia", href: `${EXAMPLES_BASE}/elysia` },
