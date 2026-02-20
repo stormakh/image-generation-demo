@@ -1,4 +1,4 @@
-export const GENERATION_PRICE = 100;
+export const GENERATION_PRICE = 10;
 
 export type OrderStatus =
   | "pending_payment"
