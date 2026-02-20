@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pixel Mint — Pay to Generate",
+  title: "Pixel Mint — Pagá para Generar",
   description:
-    "Transform a simple bank transfer into AI-generated art. Powered by Talo and Replicate.",
+    "Convertí una simple transferencia bancaria en arte generado por IA. Powered by Talo y Replicate.",
 };
 
 const TALO_SDK_URL = "https://github.com/stormakh/talo-sdk";
@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="es" className="dark">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -41,10 +41,10 @@ export default function RootLayout({
           <div className="mx-auto flex h-12 max-w-2xl items-center justify-between px-6">
             <span className="text-sm font-medium text-white">Pixel Mint</span>
             <div className="flex items-center gap-6 text-sm text-zinc-400">
-              {/* View Code */}
+              {/* Ver Código */}
               <div className="group relative">
                 <span className="cursor-default transition-colors group-hover:text-white">
-                  View Code
+                  Ver Código
                 </span>
                 <div className="absolute right-0 top-full hidden pt-2 group-hover:block">
                   <div className="flex min-w-[10rem] flex-col gap-0.5 rounded-xl border border-white/[0.08] bg-zinc-900 p-1.5 shadow-xl">
@@ -54,7 +54,7 @@ export default function RootLayout({
                       rel="noopener noreferrer"
                       className="rounded-lg px-3 py-2 text-xs text-zinc-300 transition-colors hover:bg-white/[0.06] hover:text-white"
                     >
-                      This Demo
+                      Este Demo
                     </a>
                     <a
                       href={TALO_SDK_URL}
@@ -68,10 +68,10 @@ export default function RootLayout({
                 </div>
               </div>
 
-              {/* Examples */}
+              {/* Ejemplos */}
               <div className="group relative">
                 <span className="cursor-default transition-colors group-hover:text-white">
-                  Examples
+                  Ejemplos
                 </span>
                 <div className="absolute right-0 top-full hidden pt-2 group-hover:block">
                   <div className="flex min-w-[10rem] flex-col gap-0.5 rounded-xl border border-white/[0.08] bg-zinc-900 p-1.5 shadow-xl">

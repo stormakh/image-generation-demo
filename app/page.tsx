@@ -221,7 +221,7 @@ export default function Home() {
             Pixel Mint
           </h1>
           <p className="mt-2 text-sm text-zinc-500">
-            Describe an image. Transfer to create it.
+            Describí una imagen. Transferí para crearla.
           </p>
         </header>
 
@@ -232,7 +232,7 @@ export default function Home() {
               <textarea
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
-                placeholder="A surreal landscape with floating crystals above a misty lake at dawn..."
+                placeholder="Un paisaje surrealista con cristales flotando sobre un lago brumoso al amanecer..."
                 rows={4}
                 className="w-full resize-none rounded-2xl border border-white/[0.06] bg-white/[0.02] px-5 py-4 text-[15px] leading-relaxed text-white placeholder-zinc-600 outline-none transition-colors focus:border-transparent focus:bg-white/[0.03]"
                 disabled={isCreating}
@@ -244,7 +244,7 @@ export default function Home() {
 
             <div className="mt-4 flex items-center justify-between">
               <span className="text-sm text-zinc-600">
-                Cost:{" "}
+                Costo:{" "}
                 <span className="font-medium text-zinc-400">${GENERATION_PRICE} ARS</span>
               </span>
 
@@ -280,10 +280,10 @@ export default function Home() {
                         strokeLinecap="round"
                       />
                     </svg>
-                    Creating...
+                    Creando...
                   </span>
                 ) : (
-                  "Generate"
+                  "Generar"
                 )}
               </button>
             </div>
@@ -302,7 +302,7 @@ export default function Home() {
             {/* Timer */}
             <div className="text-center">
               <p className="text-xs uppercase tracking-widest text-zinc-600">
-                Expires in
+                Vence en
               </p>
               <p className="mt-1 font-mono text-2xl font-light tracking-wider text-white tabular-nums">
                 {timeLeft}
@@ -312,16 +312,16 @@ export default function Home() {
             {/* Payment card */}
             <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 backdrop-blur-sm">
               <p className="mb-4 text-sm text-zinc-400">
-                Transfer{" "}
+                Transferí{" "}
                 <span className="font-semibold text-white">${GENERATION_PRICE} ARS</span>{" "}
-                to the following account. Once confirmed, your image will be
-                generated automatically.
+                a la siguiente cuenta. Una vez confirmado, tu imagen se
+                generará automáticamente.
               </p>
 
               {/* CVU */}
               <div className="mb-3">
                 <label className="mb-1.5 block text-[11px] uppercase tracking-widest text-zinc-600">
-                  Amount
+                  Monto
                 </label>
                 <button
                   onClick={() => handleCopy(GENERATION_PRICE.toString(), "amount")}
@@ -331,7 +331,7 @@ export default function Home() {
                     {GENERATION_PRICE} ARS
                   </span>
                   <span className="text-xs text-zinc-600 transition-colors group-hover:text-zinc-400">
-                    {copied === "amount" ? "Copied!" : "Copy"}
+                    {copied === "amount" ? "¡Copiado!" : "Copiar"}
                   </span>
                 </button>
               </div>
@@ -349,7 +349,7 @@ export default function Home() {
                     {order.alias}
                   </span>
                   <span className="text-xs text-zinc-600 transition-colors group-hover:text-zinc-400">
-                    {copied === "alias" ? "Copied!" : "Copy"}
+                    {copied === "alias" ? "¡Copiado!" : "Copiar"}
                   </span>
                 </button>
               </div>
@@ -362,7 +362,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="flex w-full items-center justify-center gap-2 rounded-xl border border-white/[0.08] py-3 text-sm text-zinc-400 transition-colors hover:border-white/[0.12] hover:text-white"
                 >
-                  Open payment page
+                  Abrir página de pago
                   <svg
                     className="h-3.5 w-3.5"
                     fill="none"
@@ -386,7 +386,7 @@ export default function Home() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-violet-400 opacity-50" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-violet-400" />
               </span>
-              Listening for payment confirmation...
+              Esperando confirmación de pago...
             </div>
 
             <div className="flex flex-col items-center gap-2">
@@ -417,10 +417,10 @@ export default function Home() {
                         strokeLinecap="round"
                       />
                     </svg>
-                    Checking...
+                    Verificando...
                   </>
                 ) : (
-                  "Already transferred? Check status"
+                  "¿Ya transferiste? Verificar estado"
                 )}
               </button>
 
@@ -428,7 +428,7 @@ export default function Home() {
                 onClick={handleReset}
                 className="text-xs text-zinc-600 underline-offset-2 hover:text-zinc-400 hover:underline"
               >
-                Cancel
+                Cancelar
               </button>
             </div>
           </div>
@@ -452,9 +452,9 @@ export default function Home() {
                 />
               </svg>
             </div>
-            <p className="text-lg font-medium text-white">Payment received</p>
+            <p className="text-lg font-medium text-white">Pago recibido</p>
             <p className="mt-1 text-sm text-zinc-500">
-              Starting image generation...
+              Iniciando generación de imagen...
             </p>
           </div>
         )}
@@ -489,10 +489,10 @@ export default function Home() {
               />
             </div>
             <p className="text-lg font-medium text-white">
-              Generating your image
+              Generando tu imagen
             </p>
             <p className="mt-1 text-sm text-zinc-500">
-              This usually takes 10-30 seconds...
+              Esto suele tardar entre 10 y 30 segundos...
             </p>
           </div>
         )}
@@ -528,7 +528,7 @@ export default function Home() {
                   d="M12 4v16m8-8H4"
                 />
               </svg>
-              Generate another
+              Generar otra
             </button>
           </div>
         )}
@@ -551,15 +551,15 @@ export default function Home() {
                 />
               </svg>
             </div>
-            <p className="text-lg font-medium text-white">Payment expired</p>
+            <p className="text-lg font-medium text-white">Pago vencido</p>
             <p className="mt-1 text-sm text-zinc-500">
-              The transfer window has closed.
+              El tiempo para realizar la transferencia expiró.
             </p>
             <button
               onClick={handleReset}
               className="mt-6 rounded-full border border-white/[0.08] px-5 py-2.5 text-sm text-zinc-400 transition-colors hover:border-white/[0.15] hover:text-white"
             >
-              Try again
+              Intentar de nuevo
             </button>
           </div>
         )}
@@ -583,16 +583,16 @@ export default function Home() {
               </svg>
             </div>
             <p className="text-lg font-medium text-white">
-              Something went wrong
+              Algo salió mal
             </p>
             <p className="mt-1 text-sm text-zinc-500">
-              Image generation failed. Your payment has been recorded.
+              La generación de imagen falló. Tu pago fue registrado.
             </p>
             <button
               onClick={handleReset}
               className="mt-6 rounded-full border border-white/[0.08] px-5 py-2.5 text-sm text-zinc-400 transition-colors hover:border-white/[0.15] hover:text-white"
             >
-              Try again
+              Intentar de nuevo
             </button>
           </div>
         )}
