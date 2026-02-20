@@ -206,7 +206,16 @@ export default function Home() {
                 background: "linear-gradient(135deg, #a78bfa, #ec4899)",
               }}
             />
-            Powered by Talo + Replicate
+            Powered by{" "}
+            <a
+              href="https://github.com/stormakh/talo-sdk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 transition-colors hover:text-zinc-300"
+            >
+              Talo SDK
+            </a>{" "}
+            + Replicate
           </div>
           <h1 className="text-4xl font-semibold tracking-tight text-white">
             Pixel Mint
